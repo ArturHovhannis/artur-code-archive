@@ -1,0 +1,33 @@
+#Algorithms
+
+##Newton-Raphson root finder
+
+General approximation algorithm to find roots of a polynomial in one variable
+                p(x) = aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₁x + a₀
+
+Newton and Raphson showed that if g is an approximation to the root, then
+                     g - p(g) / p'(g)
+
+is a better approximation, where p'(g) is a derivative of p(g)
+
+Learn more: Wikipedia
+  https://en.wikipedia.org/wiki/Newton%27s_method
+
+
+This version is for a square root, but you can write for every kind of polynomial
+
+#Tolerance level: how close we want to get to the actual root
+epsilon = 0.000000001 
+
+# Input: the number to find the square root of
+k= float(input("Enter a number to compute its square root: ")) 
+
+#Initial guess
+guess= k/2.0 
+
+# Newton-Raphson iteration
+While abs(guess*guess-k) >= epsilon: 
+  guess= guess- (((guess**2)-k)/(2*guess))
+
+# Output the result
+print("Square root of" + str(k) + "is" + str(guess))
