@@ -17,7 +17,7 @@ Learn more: Wikipedia
 This version is for a square root, but you can write for every kind of polynomial
 
 #Tolerance level: how close we want to get to the actual root
-epsilon = 0.000000001 
+epsilon = 1e-9
 
 # Input: the number to find the square root of
 k= float(input("Enter a number to compute its square root: ")) 
@@ -26,8 +26,8 @@ k= float(input("Enter a number to compute its square root: "))
 guess= k/2.0 
 
 # Newton-Raphson iteration
-While abs(guess*guess-k) >= epsilon: 
+while abs(guess*guess-k) >= epsilon: 
   guess= guess- (((guess**2)-k)/(2*guess))
 
 # Output the result
-print("Square root of" + str(k) + "is" + str(guess))
+print(f"Square root of {k} is approximately {guess}")
