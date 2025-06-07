@@ -17,7 +17,7 @@ Learn more: Wikipedia
 This version is for a square root, but you can write for every kind of polynomial
 
 #Tolerance level: how close we want to get to the actual root
-epsilon = 1e-9
+epsilon = 0.00000000000000000000000000000000000000001
 
 # Input: the number to find the square root of
 k= float(input("Enter a number to compute its square root: ")) 
